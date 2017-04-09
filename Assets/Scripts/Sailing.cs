@@ -33,8 +33,7 @@ public class Sailing : MonoBehaviour {
 	}
 
 	void Shoot() {
-		
-		GameObject liveProjectile = Instantiate (projectile, transform);
+		GameObject liveProjectile = Instantiate (projectile, transform.position, transform.rotation);
 		liveProjectile.GetComponent<Rigidbody> ().AddForce (transform.forward * projectileSpeed, ForceMode.Impulse);
 	}
 }
